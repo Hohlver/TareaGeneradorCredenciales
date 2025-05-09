@@ -1,6 +1,6 @@
 ## Generador de Credenciales de Evento
 
-### Estudiante: Ethan Nienhuser V.
+### Estudiante: Ethan Nienhuser V. – Patrones de Diseño (Sección 1)
 
 ## Patrón Prototype – Aplicación:
 La clase 'CredencialPrototype' implementa la interfaz Cloneable, lo que permite la clonación de sus instancias.
