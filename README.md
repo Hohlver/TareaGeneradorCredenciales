@@ -1,6 +1,6 @@
 ## Generador de Credenciales de Evento
 
-## Estudiante: Ethan Nienhuser V.
+# Estudiante: Ethan Nienhuser V.
 
 ## Patrón Prototype – Aplicación:
     public CredencialPrototype clone() {
