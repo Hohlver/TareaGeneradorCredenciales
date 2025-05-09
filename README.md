@@ -1,6 +1,6 @@
 ## Generador de Credenciales de Evento
 
-#Estudiante:
+# Estudiante:
 Ethan Nienhuser V.
 
 ## Patrón Prototype – Aplicación:
