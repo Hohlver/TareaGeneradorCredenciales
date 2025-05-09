@@ -3,6 +3,17 @@
 ### Estudiante: Ethan Nienhuser V.
 
 ## Patrón Prototype – Aplicación:
+La clase 'CredencialPrototype' implementa la interfaz Cloneable, lo que permite la clonación de sus instancias.
+```java
+public class CredencialPrototype implements Cloneable {
+    private String nombre;
+    private String cargo;
+    private String rut;
+```
+
+Luego se utiliza 'clone' para clonar la instancia actual de CredencialPrototype y 'super.clone()' para crear una copia de la instancia:
+
+```java
     public CredencialPrototype clone() {
         try {
             return (CredencialPrototype) super.clone();
@@ -10,39 +21,29 @@
             return null;
         }
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
-
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
-    public Credencial createCredencial() {
-        return new Credencial(nombre, cargo, rut);
-    }
+```
 ## Patrón Singleton – Aplicación:
-    private CredencialSingleton() {}
+La clase 'CredencialSingleton' implementa un atributo estático el cual mantiene la única instancia de la clase:
+```java
+public class CredencialSingleton {
+    private static CredencialSingleton instancia;
+```
 
-    public static CredencialSingleton getInstancia() {
+Ademas implementa un constructor privado para evitar que otras clases instancien 'CredencialSingleton' directamente:
+```java
+    private CredencialSingleton() {}
+```
+
+Luego se utiliza el metodo 'getInstancia' que proporciona acceso a la instancia única de la clase. Si la instancia no existe, se crea una nueva:
+
+```java
+        public static CredencialSingletongetInstancia() {
         if (instancia == null) {
             instancia = new CredencialSingleton();
         }
         return instancia;
     }
-
-    public String getAtributo() {
-        return atributo;
-    }
-
-    public void setAtributo(String atributo) {
-        this.atributo = atributo;
-    }
+```
 ## Diagrama UML:
 ![GeneradorCredenciales](https://github.com/user-attachments/assets/68d7cd31-1e27-4c52-a4ff-1072347770b6)
 
